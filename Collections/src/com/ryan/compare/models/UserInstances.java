@@ -16,6 +16,9 @@ public class UserInstances {
 		userList.add(new User(1, "joenna", "bartolay.joenna@gmail.com"));
 		userList.add(new User(3, "alejandro", "bartolay.alejandro@gmail.com"));
 		
+		Object[] tempArray = userList.toArray();
+		System.out.println(tempArray);
+		
 		userArray = new User[userList.size()];
 		userList.toArray(userArray);
 		
