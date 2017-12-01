@@ -1,16 +1,20 @@
 package com.ryan.runtime;
 
 import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
-import java.util.concurrent.atomic.AtomicBoolean;
 
 public class Main {
 	public static void main(String[] args) {
-		ExecutorService service = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
+		int counter = -4;
 		
-		Future<AtomicBoolean> response = service.submit(new CallableDemo());
+		assert counter < 100 : "Greater than 100";
+	      for(int i=counter; i<0; i--){ 
+	    	  //System.out.println(i);
+	      }
+		//System.out.println("what is wrong???");
+		//ExecutorService service = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
+		
+		//Future<AtomicBoolean> response = service.submit(new CallableDemo());
+		//System.out.println(response);
 		
 	}
 }
